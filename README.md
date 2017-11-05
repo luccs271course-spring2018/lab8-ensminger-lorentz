@@ -1,6 +1,6 @@
 # COMP 271 002 F17 Lab 8 (Week 10)
 
-# Team project
+# Team project Ben and Taylor
 
 Work in teams of two.
 
