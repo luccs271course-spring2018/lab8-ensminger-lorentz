@@ -20,6 +20,9 @@ public class Main {
     List<Map> MapEntries = new ArrayList<>(size);
     // 5. store the map's entries in it (these are of type Map.Entry<String, Integer>
     // 6. sort the ArrayList in descending order by count
+    for(int i = 1; i < size; i++ ){
+      compare(MapEntries[i-1], MapEntries[i]);
+    }
     //    using Collections.sort and an instance of the provided comparator (after fixing the latter)
     // 7. print the (up to) ten most frequent words in the text
 
