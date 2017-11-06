@@ -15,18 +15,21 @@ public class TestWordCounter {
   @Before
   public void setUp() {
     // TODO create the SUT instance
+	WordCounter count = new WordCounter;
   }
 
   @After
   public void tearDown() {
     // TODO set the SUT instance to null
+	  count = null;
   }
 
   @Test
   public void testGetCountEmpty() {
 
     // TODO verify that the SUT initially returns an empty map
-    fail();
+	  AssertEquals(count.getCounts(), Collections.emptyMap());
+    //fail();
 
   }
 
@@ -36,7 +39,11 @@ public class TestWordCounter {
     // TODO run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    fail();
+	List inStream = Arrays.asList("hello", "world", "ben", "hello", "Taylor", "world", "Taylor", "what", "is", "new").iterator();
+	count.countWords(inStream);
+	AssertEquals(count.getCount("hello"), 2);
+	AsserEquasl(count.getCount("world"), 2);
+    //fail();
 
   }
 }
