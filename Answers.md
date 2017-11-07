@@ -1,15 +1,16 @@
 # These are the answers
+## Ensminger-Lorentz Lab 8
 1. the top ten words are
-   the=33278
-   of=18012
-   and=12845
-   a=12449
-   to=12449
-   in=9386
-   was=7788
-   that=6601
-   he=6202
-   his=5529
+   * the=33278
+   * of=18012
+   * and=12845
+   * a=12449
+   * to=12449
+   * in=9386
+   * was=7788
+   * that=6601
+   * he=6202
+   * his=5529
 2. TreeMap 2 tests took: .002s
    Hashmap 2 tests took: .001s
    TreeMap took twice the time as hashmap to complete the same processes. Therefore it is less efficient.
