@@ -11,32 +11,25 @@ public class Main {
 
     // TODO complete this main program
     // 1. create a WordCounter instance
-	Map<String,Integer> data;
-   	WordCounter WCounter = new WordCounter(data);
+    Map<String, Integer> data = Collections.emptyMap();
+    WordCounter WCounter = new WordCounter(data);
     // 2. use this to count the words in the input
     WCounter.countWords(input);
     // 3. determine the size of the resulting map
     int size = WCounter.getCounts().size();
     // 4. create an ArrayList of that size and
-    List<Map.Entry<String,Integer>> MapEntries = new ArrayList<>(size);
+    List<Map.Entry<String, Integer>> MapEntries = new ArrayList<>(size);
     // 5.  store the map's entries in it (these are of type Map.Entry<String, Integer>)
-	 MapEntries.addAll(WCounter.getCounts().entrySet());
-	 
+    MapEntries.addAll(WCounter.getCounts().entrySet());
+
     // 6. sort the ArrayList in descending order by count
-	  /*
-	  for(int i = 0; i < MapEntries.size(); i++)
-	  {
-		//DescendingByCount.compare(MapEntries.get(i), MapEntries.get(i+1));
-		//Collections.sort(DescendingByCount.compare(MapEntries.get(i),MapEntries.get(i+1)));
-		  Collections.sort(MapEntries);
-	  }
-	  */
-	  	sort(MapEntries);
-    //    using Collections.sort and an instance of the provided comparator (after fixing the latter)
+
+    Collections.sort(MapEntries, new DescendingByCount());
+    //    using Collections.sort and an instance of the provided comparator (after fixing the
+    // latter)
     // 7. print the (up to) ten most frequent words in the text
-	for(int i = 0; i < 11; i++)
-	{
-		System.out.println(MapEntries.get(i));
+    for (int i = 0; i < 11; i++) {
+      System.out.println(MapEntries.get(i));
+    }
   }
-}
 }
