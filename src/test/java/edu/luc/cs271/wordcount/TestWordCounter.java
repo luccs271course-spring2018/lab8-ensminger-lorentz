@@ -18,6 +18,7 @@ public class TestWordCounter {
   public void setUp() {
     // TODO create the SUT instance
     Map<String, Integer> map = new HashMap<String, Integer>();
+    // change back to a hashmap
     count = new WordCounter(map);
   }
 
